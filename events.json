@@ -3,22 +3,22 @@
     {
       "timeStart": 0,
       "timeEnd": 5,
-      "speed": 0.01
+      "speed": 0.03
     },
     {
       "timeStart": 5,
       "timeEnd": 10,
-      "speed": 0.01
+      "speed": 0.03
     },
     {
       "timeStart": 10,
       "timeEnd": 15,
-      "speed": 0.01
+      "speed": 0.03
     },
     {
       "timeStart": 15,
       "timeEnd": 999,
-      "speed": 0.01
+      "speed": 0.03
     }
   ],
   "events": [
