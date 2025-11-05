@@ -193,16 +193,221 @@ Logique principale de l'application
 1. ✅ Créer events.json avec structure speedRoadmap et events sample
 2. ✅ Créer index.html avec vidéo, preloader, bouton play, éléments placeholder
 3. ✅ Créer style.css avec positionnement vidéo et styles de base
-4. ⏳ Implémenter le système de preload (vidéo + sons)
-5. ⏳ Implémenter le scroll virtuel avec wheel events
-6. ⏳ Implémenter le speed roadmap
-7. ⏳ Implémenter le système d'événements pour éléments HTML
-8. ⏳ Implémenter le système de sons avec loop et cleanup
-9. ⏳ Tester le scroll avant/arrière et vérifier le cleanup
+4. ✅ Implémenter le système de preload (vidéo + sons)
+5. ✅ Implémenter le scroll virtuel avec wheel events
+6. ✅ Implémenter le speed roadmap
+7. ✅ Implémenter le système d'événements pour éléments HTML
+8. ✅ Implémenter le système de sons avec loop et cleanup
+9. ✅ Tester le scroll avant/arrière et vérifier le cleanup
+
+---
+
+## 🎉 PROTOTYPE V1 COMPLÉTÉ (2025-11-05)
+
+### Ce qui a été implémenté
+
+#### Fichiers créés :
+- ✅ **events.json** : Configuration avec speedRoadmap et événements d'exemple
+- ✅ **index.html** : Structure complète avec preloader, bouton play, vidéo et éléments placeholder
+- ✅ **style.css** : Styles responsive pour tous les éléments
+- ✅ **script.js** : Logique complète de l'application
+
+#### Fonctionnalités implémentées :
+
+**1. Système de Preload**
+- Charge la vidéo et tous les sons référencés dans events.json
+- Barre de progression affichant le pourcentage de chargement
+- Détecte automatiquement tous les sons uniques dans les événements
+
+**2. Bouton Play Initial**
+- Écran d'accueil avec bouton PLAY stylisé
+- Requis pour débloquer la lecture audio dans le navigateur
+- Transition smooth vers l'expérience
+
+**3. Virtual Scroll System**
+- Utilise les événements `wheel` pour capturer le mouvement de la molette
+- **Pas de hauteur de page** : la page reste courte, scroll entièrement virtuel
+- Calcul du `currentTime` basé sur l'accumulation du scroll
+- Support bidirectionnel (avant et arrière)
+- Limites : 0 et durée de la vidéo
+
+**4. Speed Roadmap**
+- Lecture dynamique du speedRoadmap depuis events.json
+- Détection automatique du bracket de temps actuel
+- Application du multiplicateur de vitesse en temps réel
+- Formule : `delta = e.deltaY * 0.01 * speed`
+
+**5. Système d'événements - Éléments HTML**
+- Affichage/masquage automatique selon `timeIn` et `timeOut`
+- Utilise la classe `.hidden` pour le toggle
+- Vérifie tous les événements de type "element" à chaque update
+- Fonctionne dans les deux sens (avant/arrière)
+
+**6. Système d'événements - Sons**
+
+**Sons avec loop (`loop: true`):**
+- Joue en boucle tant que `currentTime` est dans le bracket [timeIn, timeOut]
+- S'arrête et se nettoie dès qu'on sort du bracket
+- Redémarre si on revient dans le bracket
+
+**Sons sans loop (`loop: false`):**
+- Se joue une fois quand on atteint `timeIn`
+- Ne joue PAS si on a déjà dépassé `timeOut` (scroll rapide)
+- Peut rejouer si on scroll en arrière et repasse le `timeIn`
+- `onended` callback pour nettoyer l'état
+
+**Cleanup des sons:**
+- Utilise un `Set` (`state.activeSounds`) pour tracker les sons actifs
+- `audio.pause()` + `audio.currentTime = 0` pour reset propre
+- Évite les répétitions et superpositions non désirées
+- Chaque son est une instance Audio unique
+
+**7. Debug Info**
+- Affichage en temps réel du `currentTime` (en secondes)
+- Affichage de la vitesse active (multiplicateur)
+- Positionné en haut à droite (peut être masqué via CSS)
+
+### Structure du code (script.js)
+
+Le code est organisé en sections claires :
+1. **Global State** : objet `state` contenant toute la configuration et l'état
+2. **DOM Elements** : références aux éléments du DOM
+3. **Initialization** : fonction `init()` qui orchestre le démarrage
+4. **Configuration** : chargement du events.json
+5. **Preloader** : fonctions de chargement avec suivi de progression
+6. **Play Button** : gestion de l'écran d'accueil
+7. **Virtual Scroll System** : événement `wheel` avec calcul de position
+8. **Speed Roadmap** : fonction `getCurrentSpeed()`
+9. **Event System** : dispatcher pour tous les types d'événements
+10. **Element Visibility** : toggle des classes `.hidden`
+11. **Sound Management** : play/stop avec distinction loop/non-loop
+12. **Debug Info** : mise à jour de l'affichage
+
+### Exemple de configuration events.json
+
+```json
+{
+  "speedRoadmap": [
+    {
+      "timeStart": 0,
+      "timeEnd": 5,
+      "speed": 0.03
+    }
+  ],
+  "events": [
+    {
+      "type": "element",
+      "elementId": "text1",
+      "timeIn": 2,
+      "timeOut": 6
+    },
+    {
+      "type": "sound",
+      "file": "coeur1.mp3",
+      "timeIn": 3,
+      "timeOut": 8,
+      "loop": true
+    }
+  ]
+}
+```
+
+### Comment utiliser
+
+1. Ouvrir `index.html` dans un navigateur
+2. Attendre le chargement (barre de progression)
+3. Cliquer sur le bouton PLAY
+4. Utiliser la molette de la souris pour contrôler la vidéo
+5. Observer les éléments et sons qui se déclenchent selon les timings
+
+### Notes techniques importantes
+
+- La vidéo est en mode `muted` par défaut (requis pour autoplay)
+- Les sons nécessitent l'interaction utilisateur (bouton PLAY)
+- Le scroll est bloqué avec `{ passive: false }` et `e.preventDefault()`
+- GSAP et ScrollTrigger sont chargés mais pas utilisés dans cette version (prêt pour évolutions futures)
+
+---
+
+## 🔮 Prochaines étapes possibles (futures sessions)
+
+### Nouveaux types d'événements à ajouter dans events.json
+
+Idées discutées pour étendre le système :
+
+1. **Type "video-effect"** : appliquer des effets CSS/filtres sur la vidéo
+   ```json
+   {
+     "type": "video-effect",
+     "effect": "blur",
+     "value": "10px",
+     "timeIn": 5,
+     "timeOut": 8
+   }
+   ```
+
+2. **Type "animation"** : déclencher des animations GSAP sur des éléments
+   ```json
+   {
+     "type": "animation",
+     "elementId": "text1",
+     "animation": "fadeIn",
+     "duration": 1.5,
+     "timeIn": 5
+   }
+   ```
+
+3. **Type "camera"** : contrôler le zoom/pan de la vidéo
+   ```json
+   {
+     "type": "camera",
+     "action": "zoom",
+     "value": 1.5,
+     "timeIn": 10,
+     "timeOut": 15
+   }
+   ```
+
+4. **Type "subtitle"** : sous-titres synchronisés
+   ```json
+   {
+     "type": "subtitle",
+     "text": "Texte du sous-titre",
+     "timeIn": 5,
+     "timeOut": 8
+   }
+   ```
+
+5. **Type "background-sound"** : musique d'ambiance avec fade in/out
+   ```json
+   {
+     "type": "background-sound",
+     "file": "ambiance.mp3",
+     "volume": 0.5,
+     "fadeIn": 2,
+     "fadeOut": 2,
+     "timeIn": 0,
+     "timeOut": 30
+   }
+   ```
+
+### Améliorations possibles
+
+- Système de fade in/out pour les éléments et sons
+- Timeline visual pour le debug
+- Contrôles UI (pause, timeline scrubber)
+- Support mobile (touch events)
+- Meilleure gestion de la mémoire pour vidéos longues
+- Export de la position/état pour sauvegarde
+- Mode plein écran
+- Raccourcis clavier
+
+---
 
 ## Notes pour reprendre la session
 - Le projet est dans `/mnt/e/samp/htdocs/icayer/unPtitCoeurQuiBat/`
-- Assets sont dans `/assets/`
-- Utiliser GSAP CDN pour ScrollTrigger
-- Pas besoin d'animations fancy pour le prototype
-- Focus sur la fonctionnalité et la robustesse du système de scroll/événements
+- Assets sont dans `/assets/` (test.mp4, coeur1.mp3, coeur2.mp3)
+- Le prototype V1 est fonctionnel et prêt à tester
+- Tous les fichiers de base sont créés et opérationnels
+- Le système est extensible pour ajouter de nouveaux types d'événements
+- GSAP/ScrollTrigger sont chargés mais pas utilisés (prêts pour évolutions)
