@@ -1,0 +1,58 @@
+{
+  "speedRoadmap": [
+    {
+      "timeStart": 0,
+      "timeEnd": 5,
+      "speed": 0.01
+    },
+    {
+      "timeStart": 5,
+      "timeEnd": 10,
+      "speed": 0.01
+    },
+    {
+      "timeStart": 10,
+      "timeEnd": 15,
+      "speed": 0.01
+    },
+    {
+      "timeStart": 15,
+      "timeEnd": 999,
+      "speed": 0.01
+    }
+  ],
+  "events": [
+    {
+      "type": "element",
+      "elementId": "text1",
+      "timeIn": 2,
+      "timeOut": 6
+    },
+    {
+      "type": "element",
+      "elementId": "text2",
+      "timeIn": 7,
+      "timeOut": 12
+    },
+    {
+      "type": "element",
+      "elementId": "image1",
+      "timeIn": 10,
+      "timeOut": 15
+    },
+    {
+      "type": "sound",
+      "file": "coeur1.mp3",
+      "timeIn": 3,
+      "timeOut": 8,
+      "loop": true
+    },
+    {
+      "type": "sound",
+      "file": "coeur2.mp3",
+      "timeIn": 10,
+      "timeOut": 10.5,
+      "loop": false
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Un Petit Coeur Qui Bat</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader" class="preloader">
+        <div class="preloader-content">
+            <h2>Chargement...</h2>
+            <div class="progress-bar">
+                <div id="progress-fill" class="progress-fill"></div>
+            </div>
+            <p id="progress-text">0%</p>
+        </div>
+    </div>
+
+    <!-- Play Button -->
+    <div id="play-screen" class="play-screen hidden">
+        <button id="play-button" class="play-button">PLAY</button>
+    </div>
+
+    <!-- Main Content -->
+    <div id="main-content" class="main-content hidden">
+        <!-- Video Container -->
+        <div class="video-container">
+            <video id="main-video" muted playsinline>
+                <source src="assets/test.mp4" type="video/mp4">
+                Votre navigateur ne supporte pas la vidéo.
+            </video>
+        </div>
+
+        <!-- Overlay Elements -->
+        <div id="text1" class="overlay-element hidden">
+            <div class="placeholder-box">
+                <h3>Texte 1</h3>
+                <p>Ceci est un élément de texte qui apparaît entre 2s et 6s</p>
+            </div>
+        </div>
+
+        <div id="text2" class="overlay-element hidden">
+            <div class="placeholder-box">
+                <h3>Texte 2</h3>
+                <p>Ceci est un élément de texte qui apparaît entre 7s et 12s</p>
+            </div>
+        </div>
+
+        <div id="image1" class="overlay-element hidden">
+            <div class="placeholder-box placeholder-image">
+                <h3>Image 1</h3>
+                <p>Élément image placeholder (10s-15s)</p>
+            </div>
+        </div>
+
+        <!-- Debug Info (optional) -->
+        <div class="debug-info">
+            <p>Time: <span id="debug-time">0.00</span>s</p>
+            <p>Speed: <span id="debug-speed">1.0</span>x</p>
+        </div>
+    </div>
+
+    <!-- GSAP and ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <!-- Main Script -->
+    <script src="script.js"></script>
+</body>
+</html>
