@@ -12,13 +12,8 @@
     },
     {
       "timeStart": 10,
-      "timeEnd": 15,
-      "speed": 0.03
-    },
-    {
-      "timeStart": 15,
-      "timeEnd": 999,
-      "speed": 0.03
+      "timeEnd": 225,
+      "speed": 0.1
     }
   ],
   "events": [

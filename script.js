@@ -117,6 +117,58 @@ function loadVideo() {
     });
 }
 
+function loadVideoFully(videoElement) {
+    return new Promise((resolve, reject) => {
+        const video = videoElement;
+
+        // Assurez-vous que l'attribut preload est 'auto' ou n'est pas 'none'
+        video.preload = 'auto';
+
+        // Tentez de démarrer le chargement
+        video.load();
+
+        const checkBuffer = () => {
+            // video.buffered est un TimeRanges object
+            // L'indice 0 contient la plage de temps mise en tampon
+            if (video.buffered.length > 0) {
+                // timeBuffered est le temps final (en secondes) de la plage mise en tampon
+                const timeBuffered = video.buffered.end(0);
+                
+                // video.duration est la durée totale de la vidéo
+                const duration = video.duration;
+
+                if (duration > 0 && timeBuffered >= duration) {
+                    console.log('Vidéo entièrement mise en mémoire tampon !');
+                    video.removeEventListener('progress', checkBuffer);
+                    video.removeEventListener('error', handleError);
+                    resolve();
+                } else {
+                    // Calcul du pourcentage chargé (pour l'affichage si nécessaire)
+                    const percentage = Math.round((timeBuffered / duration) * 100);
+                    console.log(`Chargement: ${percentage}%`);
+                }
+            }
+        };
+
+        const handleError = (e) => {
+            video.removeEventListener('progress', checkBuffer);
+            video.removeEventListener('error', handleError);
+            reject(new Error('Erreur de chargement vidéo'));
+        };
+
+        // L'événement 'progress' est déclenché périodiquement pendant le téléchargement
+        video.addEventListener('progress', checkBuffer);
+        video.addEventListener('error', handleError);
+
+        // Déclencher le chargement initial si ce n'est pas déjà fait
+        // Un petit 'play' suivi d'un 'pause' peut aussi aider à agresser le chargement
+        if (video.readyState < 3) {
+            video.play().catch(() => { /* Échec du play si l'utilisateur n'a pas interagi */ });
+            video.pause();
+        }
+    });
+}
+
 function loadSound(filename) {
     return new Promise((resolve, reject) => {
         const audio = new Audio(`assets/${filename}`);
@@ -329,7 +381,7 @@ function updateDebugInfo(speed) {
         dom.debugTime.textContent = state.currentTime.toFixed(2);
     }
     if (dom.debugSpeed) {
-        dom.debugSpeed.textContent = speed.toFixed(1);
+        dom.debugSpeed.textContent = speed.toFixed(2);
     }
 }
 
