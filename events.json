@@ -37,17 +37,126 @@
     },
     {
       "type": "sound",
-      "file": "coeur1.mp3",
-      "timeIn": 3,
-      "timeOut": 8,
+      "file": "P1_Script4_s2_ptitcoeur.mp3",
+      "timeIn": 4,
+      "timeOut": 9,
       "loop": true
     },
     {
       "type": "sound",
-      "file": "coeur2.mp3",
-      "timeIn": 10,
-      "timeOut": 10.5,
+      "file": "P1_Script4_s3_coeurSourd.mp3",
+      "timeIn": 9,
+      "timeOut": 10.32,
       "loop": false
+    },
+    {
+      "type": "sound",
+      "file": "P1_Script4_s4_ptitcoeur.mp3",
+      "timeIn": 10.98,
+      "timeOut": 17.06,
+      "loop": true
+    },
+    {
+      "type": "sound",
+      "file": "P2_Script4_s8_ptitcoeur.mp3",
+      "timeIn": 27,
+      "timeOut": 34.36,
+      "loop": true
+    },
+    {
+      "type": "sound",
+      "file": "P3_Script4_s10_rapide.mp3",
+      "timeIn": 34.36,
+      "timeOut": 37.33,
+      "loop": true
+    }
+    ,
+    {
+      "type": "sound",
+      "file": "P3_Script4_s10_lent.mp3",
+      "timeIn": 37.33,
+      "timeOut": 42.66,
+      "loop": true
+    }
+    ,
+    {
+      "type": "sound",
+      "file": "P3_Script4_s13_rapide.mp3",
+      "timeIn": 42.66,
+      "timeOut": 47.96,
+      "loop": true
+    }
+    ,
+    {
+      "type": "sound",
+      "file": "P3_Script4_s13_lent.mp3",
+      "timeIn": 42.66,
+      "timeOut": 51.29,
+      "loop": true
+    }
+    ,
+    {
+      "type": "sound",
+      "file": "P3_Script4_s17_rapide.mp3",
+      "timeIn": 51.29,
+      "timeOut": 57.40,
+      "loop": true
+    }
+    ,
+    {
+      "type": "sound",
+      "file": "P3_Script4_s17_lent.mp3",
+      "timeIn": 57.40,
+      "timeOut": 62.96,
+      "loop": true
+    }
+    ,
+    {
+      "type": "sound",
+      "file": "P3_Script4_s20_rapide.mp3",
+      "timeIn": 60.94,
+      "timeOut": 65.83,
+      "loop": true
+    }
+    ,
+    {
+      "type": "sound",
+      "file": "P3_Script4_s20_lent.mp3",
+      "timeIn": 65.83,
+      "timeOut": 69.88,
+      "loop": true
+    }
+    ,
+    {
+      "type": "sound",
+      "file": "P3_Script4_s23_rapide.mp3",
+      "timeIn": 69.88,
+      "timeOut": 74.91,
+      "loop": true
+    }
+    ,
+    {
+      "type": "sound",
+      "file": "P3_Script4_s23_lent.mp3",
+      "timeIn": 74.91,
+      "timeOut": 79,
+      "loop": true
+    }
+    ,
+    {
+      "type": "sound",
+      "file": "P3_Script4_s26_rapide.mp3",
+      "timeIn": 79,
+      "timeOut": 83.95,
+      "loop": true
+    }
+    ,
+    {
+      "type": "sound",
+      "file": "P3_Script4_s26_lent.mp3",
+      "timeIn": 83.75,
+      "timeOut": 83.85,
+      "loop": true
     }
   ]
 }
