@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Zilla Slab", serif;
     background: #000;
     color: #fff;
     overflow-x: hidden;
@@ -51,14 +51,15 @@ body {
 
 .progress-fill {
     height: 100%;
-    background: linear-gradient(90deg, #ff0066, #ff6699);
+    background: linear-gradient(90deg, #7d7d7d, #f4f2f3);
     width: 0%;
     transition: width 0.3s ease;
 }
 
 #progress-text {
+    font-family: "Zilla Slab", serif;
     font-size: 18px;
-    color: #ff6699;
+    color: #7d7d7d;
 }
 
 /* Play Screen */
@@ -80,11 +81,12 @@ body {
 }
 
 .play-button {
+    font-family: "Zilla Slab", serif;
     padding: 30px 60px;
     font-size: 32px;
     font-weight: bold;
-    background: #ff0066;
-    color: #fff;
+    background: #fff;
+    color: #000;
     border: none;
     border-radius: 10px;
     cursor: pointer;
@@ -92,7 +94,7 @@ body {
 }
 
 .play-button:hover {
-    background: #ff3385;
+    background: #f9f6df;
     transform: scale(1.05);
 }
 
@@ -140,39 +142,47 @@ body {
     position: fixed;
     bottom: 50px;
     left: 50%;
-    transform: translateX(-50%);
     z-index: 200;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.6s ease;
 }
 
 .overlay-element.hidden {
-    display: none;
-    opacity: 0;
+  opacity: 0;
+}
+
+.overlay-element:not(.hidden) {
+  opacity: 1;
 }
 
 .placeholder-box {
     background: rgba(255, 0, 102, 0);
-    padding: 20px 40px;
+    padding: 60px 40px;
     border-radius: 0px;
     text-align: center;
     
 }
 
-.placeholder-box h3 {
-    font-family: "Zilla Slab", serif;
-    margin-bottom: 10px;
-    font-size: 24px;
+.placeholder-box2 {
+    background: rgba(255, 0, 102, 0);
+    padding: 60px 40px;
+    border-radius: 0px;
+    max-width: none;   /* enlever toute limite de largeur */
+    text-align: left;
+    
 }
 
 .placeholder-box p {
     font-family: "Zilla Slab", serif;
+    color: #ffffff;
     font-style: normal;
-    font-size: 20px;
+    font-size: 24px;
 }
 
-.placeholder-image {
-    background: rgba(102, 0, 255, 0.9);
-    box-shadow: 0 4px 20px rgba(102, 0, 255, 0.5);
+.placeholder-box2 p {
+    font-family: "Zilla Slab", serif;
+    color: #e5ddca;
+    font-style: normal;
+    font-size: 24px;
 }
 
 /* Debug Info */
@@ -193,6 +203,6 @@ body {
 }
 
 .debug-info span {
-    color: #ff6699;
+    color: #f5be25;
     font-weight: bold;
 }

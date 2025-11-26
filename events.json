@@ -3,37 +3,283 @@
     {
       "timeStart": 0,
       "timeEnd": 5,
-      "speed": 0.03
+      "speed": 0.1
     },
     {
       "timeStart": 5,
       "timeEnd": 10,
-      "speed": 0.03
+      "speed": 0.1
     },
     {
       "timeStart": 10,
-      "timeEnd": 225,
-      "speed": 0.1
+      "timeEnd": 233,
+      "speed": 0.2
     }
   ],
   "events": [
     {
       "type": "element",
-      "elementId": "text1",
-      "timeIn": 2,
-      "timeOut": 6
+      "elementId": "P3_s10_phrase",
+      "timeIn": 34.5,
+      "timeOut": 37.5
     },
     {
       "type": "element",
-      "elementId": "text2",
-      "timeIn": 7,
-      "timeOut": 12
+      "elementId": "P3_s10_text1",
+      "timeIn": 34.5,
+      "timeOut": 37.5
     },
     {
       "type": "element",
-      "elementId": "image1",
-      "timeIn": 10,
-      "timeOut": 15
+      "elementId": "P3_s10_text2",
+      "timeIn": 35.5,
+      "timeOut": 37.5
+    },
+    {
+      "type": "element",
+      "elementId": "P3_s10_text3",
+      "timeIn": 36.5,
+      "timeOut": 37.5
+    },
+    {
+      "type": "element",
+      "elementId": "P3_s13_text1",
+      "timeIn": 44,
+      "timeOut": 47
+    },
+    {
+      "type": "element",
+      "elementId": "P3_s13_text2",
+      "timeIn": 45,
+      "timeOut": 47
+    },
+    {
+      "type": "element",
+      "elementId": "P3_s13_text3",
+      "timeIn": 46,
+      "timeOut": 47
+    },
+    {
+      "type": "element",
+      "elementId": "P3_s17_text1",
+      "timeIn": 52,
+      "timeOut": 56
+    },
+    {
+      "type": "element",
+      "elementId": "P3_s17_text2",
+      "timeIn": 53,
+      "timeOut": 56
+    },
+    {
+      "type": "element",
+      "elementId": "P3_s17_text3",
+      "timeIn": 54.5,
+      "timeOut": 56
+    },
+     {
+      "type": "element",
+      "elementId": "P3_s20_text1",
+      "timeIn": 61,
+      "timeOut": 65
+    },
+    {
+      "type": "element",
+      "elementId": "P3_s20_text2",
+      "timeIn": 62.5,
+      "timeOut": 65
+    },
+    {
+      "type": "element",
+      "elementId": "P3_s20_text3",
+      "timeIn": 64,
+      "timeOut": 65
+    },
+    {
+      "type": "element",
+      "elementId": "P3_s23_text1",
+      "timeIn": 70,
+      "timeOut": 74.5
+    },
+    {
+      "type": "element",
+      "elementId": "P3_s23_text2",
+      "timeIn": 71.5,
+      "timeOut": 74.5
+    },
+    {
+      "type": "element",
+      "elementId": "P3_s23_text3",
+      "timeIn": 73,
+      "timeOut": 74.5
+    },
+    {
+      "type": "element",
+      "elementId": "P3_s26_text1",
+      "timeIn": 79,
+      "timeOut": 83
+    },
+    {
+      "type": "element",
+      "elementId": "P3_s26_text2",
+      "timeIn": 80.5,
+      "timeOut": 83
+    },
+    {
+      "type": "element",
+      "elementId": "P3_s26_text3",
+      "timeIn": 82,
+      "timeOut": 83
+    },
+    {
+      "type": "element",
+      "elementId": "P4_s28_text1",
+      "timeIn": 84,
+      "timeOut": 101.8
+    },
+    {
+      "type": "element",
+      "elementId": "P4_s28_text2",
+      "timeIn": 89.5,
+      "timeOut": 101.8
+    },
+    {
+      "type": "element",
+      "elementId": "P4_s28_text3",
+      "timeIn": 99.8,
+      "timeOut": 101.8
+    },
+    {
+      "type": "element",
+      "elementId": "P4_s29_text1",
+      "timeIn": 107.5,
+      "timeOut": 119.8
+    },
+    {
+      "type": "element",
+      "elementId": "P4_s29_text2",
+      "timeIn": 116,
+      "timeOut": 119.8
+    },
+    {
+      "type": "element",
+      "elementId": "P4_s29_text3",
+      "timeIn": 117,
+      "timeOut": 119.8
+    },
+    {
+      "type": "element",
+      "elementId": "P4_s29_text4",
+      "timeIn": 118,
+      "timeOut": 119.8
+    },
+    {
+      "type": "element",
+      "elementId": "P4_s30_text1",
+      "timeIn": 124,
+      "timeOut": 137.8
+    },
+    {
+      "type": "element",
+      "elementId": "P4_s30_text2",
+      "timeIn": 134,
+      "timeOut": 137.8
+    },
+    {
+      "type": "element",
+      "elementId": "P4_s31_text1",
+      "timeIn": 142.8,
+      "timeOut": 155.8
+    },
+    {
+      "type": "element",
+      "elementId": "P4_s31_text2",
+      "timeIn": 152.8,
+      "timeOut": 155.8
+    },
+    {
+      "type": "element",
+      "elementId": "P4_s32_text1",
+      "timeIn": 160.6,
+      "timeOut": 173.8
+    },
+    {
+      "type": "element",
+      "elementId": "P4_s32_text2",
+      "timeIn": 170.8,
+      "timeOut": 173.8
+    },
+    {
+      "type": "element",
+      "elementId": "P4_s32_text3",
+      "timeIn": 171.8,
+      "timeOut": 173.8
+    },
+    {
+      "type": "element",
+      "elementId": "P4_s33_text1",
+      "timeIn": 178.5,
+      "timeOut": 191.8
+    },
+    {
+      "type": "element",
+      "elementId": "P4_s33_text2",
+      "timeIn": 188.8,
+      "timeOut": 191.8
+    },
+    {
+      "type": "element",
+      "elementId": "P4_s33_text3",
+      "timeIn": 189.8,
+      "timeOut": 191.8
+    },
+     {
+      "type": "element",
+      "elementId": "P4_s33_text4",
+      "timeIn": 190.8,
+      "timeOut": 191.8
+    },
+    {
+      "type": "element",
+      "elementId": "P4_s34_text1",
+      "timeIn": 192,
+      "timeOut": 209.8
+    },
+    {
+      "type": "element",
+      "elementId": "P4_s34_text2",
+      "timeIn": 196.5,
+      "timeOut": 209.8
+    },
+    {
+      "type": "element",
+      "elementId": "P4_s34_text3",
+      "timeIn": 206.8,
+      "timeOut": 209.8
+    },
+    {
+      "type": "element",
+      "elementId": "P4_s35_text1",
+      "timeIn": 214.8,
+      "timeOut": 227.78
+    },
+    {
+      "type": "element",
+      "elementId": "P4_s35_text2",
+      "timeIn": 224.8,
+      "timeOut": 227.78
+    },
+     {
+      "type": "element",
+      "elementId": "P5_s36_text1",
+      "timeIn": 227.9,
+      "timeOut": 233
+    },
+    {
+      "type": "element",
+      "elementId": "P5_s36_text2",
+      "timeIn": 230,
+      "timeOut": 233
     },
     {
       "type": "sound",
