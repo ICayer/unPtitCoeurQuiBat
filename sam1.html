@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Un Petit Coeur Qui Bat</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fascinate&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+US+Modern:wght@100..400&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+<style>
+    body{
+        overflow: hidden;
+    }
+    body *{
+        //outline: 1px solid red;
+    }
+    .video-container{
+        position: relative;
+    }
+    .wrapper-contenus-texte{
+        position: relative;
+        //background-color: #333;
+        min-height: 300px;
+    }
+    .overlay-element{
+        position: absolute;
+        /* top: 50px; */
+        bottom: unset;
+    }
+    
+    .overlay-element.demi-gauche{
+        width: 50%;
+        //outline: 1px solid red;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        left: 0;
+    }
+    .overlay-element.demi-droite{        
+        width: 50%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        //outline: 1px solid green;
+        left: 50%;
+    }
+</style>
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader" class="preloader">
+        <div class="preloader-content">
+            <h2>Chargement...</h2>
+            <div class="progress-bar">
+                <div id="progress-fill" class="progress-fill"></div>
+            </div>
+            <p id="progress-text">0%</p>
+        </div>
+    </div>
+
+    <!-- Play Button -->
+    <div id="play-screen" class="play-screen hidden">
+        <button id="play-button" class="play-button">Inspirer</button>
+    </div>
+
+    <!-- Main Content -->
+    <div id="main-content" class="main-content hidden">
+        <!-- Video Container -->
+        <div class="video-container">
+            <video id="main-video" muted playsinline preload="auto">
+                <source src="http://icayer.cubehoster.net/petitcoeur/video/compo_complete_opti_h265.mp4" type="video/mp4">
+                Votre navigateur ne supporte pas la vidéo...
+            </video>
+        </div>
+        <div class="wrapper-contenus-texte">
+            <!-- Overlay Elements -->
+            <!-- Partie 3 - mémoire 1 - Inuit -->
+            <!-- Ligne du haut (à -30px) -->
+                <div id="P3_s10_text1" class="overlay-element hidden">
+                <div class="placeholder-box" style="transform: translate(-50%, -30px);">
+                    <p>Soleil de minuit, il n'y a pas de temps.</p>
+                </div>
+                </div>
+
+                <!-- Ligne du milieu (au centre) -->
+                <div id="P3_s10_text2" class="overlay-element hidden">
+                <div class="placeholder-box" style="transform: translate(-50%, 0);">
+                    <p>-50 ℃</p>
+                </div>
+                </div>
+
+                <!-- Ligne du bas (à +30px) -->
+                <div id="P3_s10_text3" class="overlay-element hidden">
+                <div class="placeholder-box" style="transform: translate(-50%, 30px);">
+                    <p>Elle prend soin de moi.</p>
+                </div>
+                </div>
+            <!-- Partie 3 - mémoire 2 - Canot de nuit -->
+                    <div id="P3_s13_text1" class="overlay-element hidden">
+                <div class="placeholder-box" style="transform: translate(-50%, -30px);">
+                    <p>Ensemble, </p>
+                </div>
+            </div>
+
+            <div id="P3_s13_text2" class="overlay-element hidden">
+                <div class="placeholder-box" style="transform: translate(-50%, 0);">
+                    <p>il faisait frête, </p>
+                </div>
+            </div>
+
+            <div id="P3_s13_text3" class="overlay-element hidden">
+                <div class="placeholder-box"style="transform: translate(-50%, 30px);">
+                    <p>un moment de bonheur.</p>
+                </div>
+            </div>
+
+            <!-- Partie 3 - mémoire 3 - Tuktu le caribou -->
+                    <div id="P3_s17_text1" class="overlay-element hidden">
+                <div class="placeholder-box" style="transform: translate(-50%, -30px);">
+                    <p>Je parle de caribou.</p>
+                </div>
+            </div>
+
+            <div id="P3_s17_text2" class="overlay-element hidden">
+                <div class="placeholder-box" style="transform: translate(-50%, 0);">
+                    <p>Elle pleure sa fille.</p>
+                </div>
+            </div>
+
+            <div id="P3_s17_text3" class="overlay-element hidden">
+                <div class="placeholder-box"style="transform: translate(-50%, 30px);">
+                    <p>M'entends-tu?</p>
+                </div>
+            </div>
+
+            <!-- Partie 3 - mémoire 4 - GINU -->
+                    <div id="P3_s20_text1" class="overlay-element hidden">
+                <div class="placeholder-box" style="transform: translate(-50%, -30px);">
+                    <p>Aller ailleurs ensemble,</p>
+                </div>
+            </div>
+
+            <div id="P3_s20_text2" class="overlay-element hidden">
+                <div class="placeholder-box" style="transform: translate(-50%, 0);">
+                    <p>...à déterminer...</p>
+                </div>
+            </div>
+
+            <div id="P3_s20_text3" class="overlay-element hidden">
+                <div class="placeholder-box"style="transform: translate(-50%, 30px);">
+                    <p>...à déterminer...</p>
+                </div>
+            </div>
+
+            <!-- Partie 3 - mémoire 5 - Poule de mer -->
+                    <div id="P3_s23_text1" class="overlay-element hidden">
+                <div class="placeholder-box" style="transform: translate(-50%, -30px);">
+                    <p>Sujet inconnu, collaborer.</p>
+                </div>
+            </div>
+
+            <div id="P3_s23_text2" class="overlay-element hidden">
+                <div class="placeholder-box" style="transform: translate(-50%, 0);">
+                    <p>Pas de hiérarchie, </p>
+                </div>
+            </div>
+
+            <div id="P3_s23_text3" class="overlay-element hidden">
+                <div class="placeholder-box"style="transform: translate(-50%, 30px);">
+                    <p>là, t'apprends vraiment.</p>
+                </div>
+            </div>
+
+            <!-- Partie 3 - mémoire 6 - Femme et fille -->
+                    <div id="P3_s26_text1" class="overlay-element hidden">
+                <div class="placeholder-box" style="transform: translate(-50%, -30px);">
+                    <p>M'entends-tu?</p>
+                </div>
+            </div>
+
+            <div id="P3_s26_text2" class="overlay-element hidden">
+                <div class="placeholder-box" style="transform: translate(-50%, 30px);">
+                    <p>Pendant que tu essayes de travailler sur ta question de recherche, on cherche des filles disparues.</p>
+                </div>
+            </div>
+
+            <div id="P3_s26_text3" class="overlay-element hidden">
+                <div class="placeholder-box"style="transform: translate(-50%, 60px);">
+                    <p>M'entends-tu?</p>
+                </div>
+            </div>
+
+            <!-- Partie 4 - séquence 1 - spirale et coeur -->
+            <div id="P4_s28_text1" class="overlay-element hidden">
+                <div class="placeholder-box" style="transform: translate(-50%, -30px);">
+                    <p>Deux parcours simultanés;</p>
+                </div>
+            </div>
+
+            <div id="P4_s28_text2" class="overlay-element demi-gauche hidden">
+                <div class="placeholder-box2" style="text-align: left;">
+                    <p>L’objet de recherche.</p>
+                </div>
+            </div>
+
+            <div id="P4_s28_text3" class="overlay-element demi-droite hidden">
+                <div class="placeholder-box2" style="text-align: left;">
+                    <p>L’objet avec le contexte.</p>
+                </div>
+            </div>
+
+            <!-- Partie 4 - séquence 2 - classe et relation -->
+            <div id="P4_s29_text1" class="overlay-element demi-gauche hidden">
+                <div class="placeholder-box2" style="transform: translate(0, 0); text-align: left;">
+                    <p>On sépare.</p>
+                </div>
+            </div>
+
+            <div id="P4_s29_text2" class="overlay-element demi-droite hidden">
+                <div class="placeholder-box2"  style="transform: translate(0, -30px); text-align: left;">
+                    <p>On relie.</p>
+                </div>
+            </div>
+
+            <div id="P4_s29_text3" class="overlay-element demi-droite hidden">
+                <div class="placeholder-box2"  style="transform: translate(0, 0); text-align: left; ">
+                    <p>Les Relations; un prisme pour comprendre.</p>
+                </div>
+            </div>
+
+            <div id="P4_s29_text4" class="overlay-element demi-droite hidden">
+                <div class="placeholder-box2"  style="transform: translate(0, 30px); text-align: left;">
+                    <p>Moins de caribous, les enfants ne mangeront plus.</p>
+                </div>
+            </div>
+
+            <!-- Partie 4 - séquence 3 - grille et humain -->
+            <div id="P4_s30_text1" class="overlay-element hidden">
+                <div class="placeholder-box2" style="transform: translate(calc(-50% - 600px), 0px); text-align: left;">
+                    <p>On objectivise.</p>
+                </div>
+            </div>
+
+            <div id="P4_s30_text2" class="overlay-element hidden">
+                <div class="placeholder-box2"  style="transform: translate(calc(-50% + 150px), 0px); text-align: left;">
+                    <p>On ancre la science dans la culture.</p>
+                </div>
+            </div>
+
+            <!-- Partie 4 - séquence 4 - ligne et flocon -->
+            <div id="P4_s31_text1" class="overlay-element hidden">
+                <div class="placeholder-box2" style="transform: translate(calc(-50% - 600px), 0px); text-align: left;">
+                    <p>Le scientifique et l’objet.</p>
+                </div>
+            </div>
+
+            <div id="P4_s31_text2" class="overlay-element hidden">
+                <div class="placeholder-box2"  style="transform: translate(calc(-50% + 150px), 0px); text-align: left;">
+                    <p>Les interactions et relations.</p>
+                </div>
+            </div>
+
+            <!-- Partie 4 - séquence 5 - constellation et concentration -->
+            <div id="P4_s32_text1" class="overlay-element hidden">
+                <div class="placeholder-box2" style="transform: translate(calc(-50% - 600px), 0px); text-align: left;">
+                    <p>On sépare le relationnel.</p>
+                </div>
+            </div>
+
+            <div id="P4_s32_text2" class="overlay-element hidden">
+                <div class="placeholder-box2"  style="transform: translate(calc(-50% + 150px), 0px); text-align: left;">
+                    <p>On fait de la science,</p>
+                </div>
+            </div>
+
+            <div id="P4_s32_text3" class="overlay-element hidden">
+                <div class="placeholder-box2"  style="transform: translate(calc(-50% + 150px), 30px); text-align: left; ">
+                    <p>on pêche ensemble.</p>
+                </div>
+            </div>
+
+            <!-- Partie 4 - séquence 6 - gris et attente -->
+            <div id="P4_s33_text1" class="overlay-element hidden">
+                <div class="placeholder-box2" style="transform: translate(calc(-50% - 600px), 0px); text-align: left;">
+                    <p>On produit, écrit, progresse.</p>
+                </div>
+            </div>
+
+            <div id="P4_s33_text2" class="overlay-element hidden">
+                <div class="placeholder-box2"  style="transform: translate(calc(-50% + 150px), 0px); text-align: left;">
+                    <p>C’est long, on attend.</p>
+                </div>
+            </div>
+
+            <div id="P4_s33_text3" class="overlay-element hidden">
+                <div class="placeholder-box2"  style="transform: translate(calc(-50% + 150px), 30px); text-align: left; ">
+                    <p>Quelque chose va se passer.</p>
+                </div>
+            </div>
+
+            <div id="P4_s33_text4" class="overlay-element hidden">
+                <div class="placeholder-box2"  style="transform: translate(calc(-50% + 150px), 60px); text-align: left;">
+                    <p>On boit du thé.</p>
+                </div>
+            </div>
+
+            <!-- Partie 4 - séquence 7 - gris et consecration -->
+            <div id="P4_s34_text1" class="overlay-element hidden">
+                <div class="placeholder-box" style="transform: translate(-50%, -30px);">
+                    <p>Deux processus simultanés.</p>
+                </div>
+            </div>
+
+            <div id="P4_s34_text2" class="overlay-element hidden">
+                <div class="placeholder-box" style="transform: translate(-50%, 0);">
+                    <p>La science progresse.</p>
+                </div>
+            </div>
+
+            <div id="P4_s34_text3" class="overlay-element hidden">
+                <div class="placeholder-box"style="transform: translate(-50%, 30px);">
+                    <p>Je suis le territoire, le territoire c’est moi.</p>
+                </div>
+            </div>
+
+            <!-- Partie 4 - séquence 8 - publication et futurDurable -->
+            <div id="P4_s35_text1" class="overlay-element hidden">
+                <div class="placeholder-box" style="transform: translate(-50%, -30px);">
+                    <p>L’auteur; les statistiques, mon article.</p>
+                </div>
+            </div>
+
+            <div id="P4_s35_text2" class="overlay-element hidden">
+                <div class="placeholder-box" style="transform: translate(-50%, 0);">
+                    <p>L’auteur; le territoire.</p>
+                </div>
+            </div>
+
+            <!-- Partie 5 - outro -->
+            <div id="P5_s36_text1" class="overlay-element hidden">
+                <div class="placeholder-box" style="transform: translate(-50%, -30px);">
+                    <p>Hommage au ptit coeur,</p>
+                </div>
+            </div>
+
+            <div id="P5_s36_text2" class="overlay-element hidden">
+                <div class="placeholder-box" style="transform: translate(-50%, 0);">
+                    <p>une invitation à lui faire place.</p>
+                </div>
+            </div>
+
+            <!-- Debug Info (optional) -->
+            <div class="debug-info">
+                <p>Time: <span id="debug-time">0.00</span>s</p>
+                <p>Speed: <span id="debug-speed">1.0</span>x</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- GSAP and ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <!-- Main Script -->
+    <script src="script.js"></script>
+</body>
+</html>
