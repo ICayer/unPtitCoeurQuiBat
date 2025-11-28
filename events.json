@@ -279,7 +279,7 @@
       "type": "element",
       "elementId": "P5_s36_text2",
       "timeIn": 230,
-      "timeOut": 233
+      "timeOut": 236.80
     },
     {
       "type": "sound",
@@ -292,15 +292,8 @@
       "type": "sound",
       "file": "P1_Script4_s3_coeurSourd.mp3",
       "timeIn": 9,
-      "timeOut": 10.32,
+      "timeOut": 18,
       "loop": false
-    },
-    {
-      "type": "sound",
-      "file": "P1_Script4_s4_ptitcoeur.mp3",
-      "timeIn": 10.98,
-      "timeOut": 17.06,
-      "loop": true
     },
     {
       "type": "sound",
@@ -311,7 +304,7 @@
     },
     {
       "type": "sound",
-      "file": "P3_Script4_s10_rapide.mp3",
+      "file": "P3_Script4_s10_rapide2.mp3",
       "timeIn": 34.36,
       "timeOut": 37.33,
       "loop": true
@@ -327,9 +320,9 @@
     ,
     {
       "type": "sound",
-      "file": "P3_Script4_s13_rapide.mp3",
+      "file": "P3_Script4_s13_rapide2.mp3",
       "timeIn": 42.66,
-      "timeOut": 47.96,
+      "timeOut": 47.66,
       "loop": true
     }
     ,
@@ -343,7 +336,7 @@
     ,
     {
       "type": "sound",
-      "file": "P3_Script4_s17_rapide.mp3",
+      "file": "P3_Script4_s17_rapide2.mp3",
       "timeIn": 51.29,
       "timeOut": 57.40,
       "loop": true
@@ -359,7 +352,7 @@
     ,
     {
       "type": "sound",
-      "file": "P3_Script4_s20_rapide.mp3",
+      "file": "P3_Script4_s20_rapide2.mp3",
       "timeIn": 60.94,
       "timeOut": 65.83,
       "loop": true
@@ -375,7 +368,7 @@
     ,
     {
       "type": "sound",
-      "file": "P3_Script4_s23_rapide.mp3",
+      "file": "P3_Script4_s23_rapide2.mp3",
       "timeIn": 69.88,
       "timeOut": 74.91,
       "loop": true
@@ -391,9 +384,9 @@
     ,
     {
       "type": "sound",
-      "file": "P3_Script4_s26_rapide.mp3",
+      "file": "P3_Script4_s26_rapide2.mp3",
       "timeIn": 79,
-      "timeOut": 83.95,
+      "timeOut": 83.75,
       "loop": true
     }
     ,
@@ -402,6 +395,14 @@
       "file": "P3_Script4_s26_lent.mp3",
       "timeIn": 83.75,
       "timeOut": 83.85,
+      "loop": true
+    }
+    ,
+    {
+      "type": "sound",
+      "file": "P4_Script4_s35_coeurSourd.mp3",
+      "timeIn": 219.5,
+      "timeOut": 236.8,
       "loop": true
     }
   ]

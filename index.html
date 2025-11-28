@@ -8,6 +8,44 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fascinate&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+US+Modern:wght@100..400&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+<style>
+    body{
+        overflow: hidden;
+    }
+   /* body *{
+        outline: 1px solid red;
+    }*/
+    .video-container{
+        position: relative;
+    }
+    .wrapper-contenus-texte{
+        position: relative;
+        /*background-color: #333;*/
+        min-height: 300px;
+    }
+    .overlay-element{
+        position: absolute;
+        /* top: 50px; */
+        bottom: unset;
+    }
+    
+    .overlay-element.demi-gauche{
+        width: 50%;
+        /*outline: 1px solid red;*/
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        left: 0;
+    }
+    .overlay-element.demi-droite{        
+        width: 50%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        /*outline: 1px solid green;*/
+        left: 50%;
+    }
+</style>
 </head>
 <body>
     <!-- Preloader -->
@@ -30,8 +68,9 @@
     <div id="main-content" class="main-content hidden">
         <!-- Video Container -->
         <div class="video-container">
-            <video id="main-video" muted playsinline>
-                <source src="http://icayer.cubehoster.net/petitcoeur/video/compo_complete_opti_h265.mp4" type="video/mp4">
+            <video id="main-video" muted playsinline preload="auto">
+               <source src="http://icayer.cubehoster.net/petitcoeur/video/compo_complete_opti_h265.mp4" type="video/mp4">
+                <!-- <source src="assets/compo_complete_opti_h265.mp4" type="video/mp4"> -->
                 Votre navigateur ne supporte pas la vidéo...
             </video>
         </div>
@@ -136,134 +175,134 @@
 
         <!-- Partie 3 - mémoire 6 - Femme et fille -->
                    <div id="P3_s26_text1" class="overlay-element hidden">
-            <div class="placeholder-box" style="transform: translate(-50%, -30px);">
+            <div class="placeholder-box" style="transform: translate(-50%, -60px);">
                 <p>M'entends-tu?</p>
             </div>
         </div>
 
         <div id="P3_s26_text2" class="overlay-element hidden">
-            <div class="placeholder-box" style="transform: translate(-50%, 30px);">
+            <div class="placeholder-box" style="transform: translate(-50%, -30px);">
                 <p>Pendant que tu essayes de travailler sur ta question de recherche, on cherche des filles disparues.</p>
             </div>
         </div>
 
         <div id="P3_s26_text3" class="overlay-element hidden">
-            <div class="placeholder-box"style="transform: translate(-50%, 60px);">
+            <div class="placeholder-box"style="transform: translate(-50%, 30px);">
                 <p>M'entends-tu?</p>
             </div>
         </div>
 
         <!-- Partie 4 - séquence 1 - spirale et coeur -->
         <div id="P4_s28_text1" class="overlay-element hidden">
-            <div class="placeholder-box" style="transform: translate(-50%, -30px);">
-                <p>Deux parcours simultanés;</p>
+                <div class="placeholder-box" style="transform: translate(-50%, -30px);">
+                    <p>Deux parcours simultanés;</p>
+                </div>
             </div>
-        </div>
 
-        <div id="P4_s28_text2" class="overlay-element hidden">
-            <div class="placeholder-box2" style="transform: translate(calc(-50% - 600px), 20px); text-align: left;">
-                <p>L’objet de recherche.</p>
+            <div id="P4_s28_text2" class="overlay-element demi-gauche hidden">
+                <div class="placeholder-box2" >
+                    <p>L’objet de recherche.</p>
+                </div>
             </div>
-        </div>
 
-        <div id="P4_s28_text3" class="overlay-element hidden">
-            <div class="placeholder-box2" style="transform: translate(calc(-50% + 150px), 20px); text-align: left;">
-                <p>L’objet avec le contexte.</p>
+            <div id="P4_s28_text3" class="overlay-element demi-droite hidden">
+                <div class="placeholder-box2" >
+                    <p>L’objet avec le contexte.</p>
+                </div>
             </div>
-        </div>
 
         <!-- Partie 4 - séquence 2 - classe et relation -->
-        <div id="P4_s29_text1" class="overlay-element hidden">
-            <div class="placeholder-box2" style="transform: translate(calc(-50% - 600px), 0px); text-align: left;">
-                <p>On sépare.</p>
+        <div id="P4_s29_text1" class="overlay-element demi-gauche hidden">
+                <div class="placeholder-box2" style="transform: translate(0, -30px); ">
+                    <p>On sépare.</p>
+                </div>
             </div>
-        </div>
 
-        <div id="P4_s29_text2" class="overlay-element hidden">
-            <div class="placeholder-box2"  style="transform: translate(calc(-50% + 150px), 0px); text-align: left;">
-                <p>On relie.</p>
+            <div id="P4_s29_text2" class="overlay-element demi-droite hidden">
+                <div class="placeholder-box2"  style="transform: translate(0, -30px); ">
+                    <p>On relie.</p>
+                </div>
             </div>
-        </div>
 
-        <div id="P4_s29_text3" class="overlay-element hidden">
-            <div class="placeholder-box2"  style="transform: translate(calc(-50% + 150px), 30px); text-align: left; ">
-                <p>Les Relations; un prisme pour comprendre.</p>
+            <div id="P4_s29_text3" class="overlay-element demi-droite hidden">
+                <div class="placeholder-box2"  style="transform: translate(0, 0); ">
+                    <p>Les Relations; un prisme pour comprendre.</p>
+                </div>
             </div>
-        </div>
 
-        <div id="P4_s29_text4" class="overlay-element hidden">
-            <div class="placeholder-box2"  style="transform: translate(calc(-50% + 150px), 60px); text-align: left;">
-                <p>Moins de caribous, les enfants ne mangeront plus.</p>
+            <div id="P4_s29_text4" class="overlay-element demi-droite hidden">
+                <div class="placeholder-box2"  style="transform: translate(0, 30px); ">
+                    <p>Plus de castor, moins de baleine.</p>
+                </div>
             </div>
-        </div>
 
         <!-- Partie 4 - séquence 3 - grille et humain -->
-          <div id="P4_s30_text1" class="overlay-element hidden">
-            <div class="placeholder-box2" style="transform: translate(calc(-50% - 600px), 0px); text-align: left;">
+          <div id="P4_s30_text1" class="overlay-element demi-gauche hidden">
+            <div class="placeholder-box2" style="transform: translate(0, -30px); ">
                 <p>On objectivise.</p>
             </div>
         </div>
 
-        <div id="P4_s30_text2" class="overlay-element hidden">
-            <div class="placeholder-box2"  style="transform: translate(calc(-50% + 150px), 0px); text-align: left;">
-                <p>On ancre la science dans la culture.</p>
+        <div id="P4_s30_text2" class="overlay-element demi-droite hidden">
+            <div class="placeholder-box2"  style="transform: translate(0, -30px); ">
+                <p>J'ancre la science dans la culture.</p>
             </div>
         </div>
 
         <!-- Partie 4 - séquence 4 - ligne et flocon -->
-         <div id="P4_s31_text1" class="overlay-element hidden">
-            <div class="placeholder-box2" style="transform: translate(calc(-50% - 600px), 0px); text-align: left;">
+         <div id="P4_s31_text1" class="overlay-element demi-gauche hidden">
+            <div class="placeholder-box2" style="transform: translate(0, -30px);">
                 <p>Le scientifique et l’objet.</p>
             </div>
         </div>
 
-        <div id="P4_s31_text2" class="overlay-element hidden">
-            <div class="placeholder-box2"  style="transform: translate(calc(-50% + 150px), 0px); text-align: left;">
-                <p>Les interactions et relations.</p>
+        <div id="P4_s31_text2" class="overlay-element demi-droite hidden">
+            <div class="placeholder-box2"  style="transform: translate(0, -30px); ">
+                <p>Des interactions et des relations.</p>
             </div>
         </div>
 
         <!-- Partie 4 - séquence 5 - constellation et concentration -->
-         <div id="P4_s32_text1" class="overlay-element hidden">
-            <div class="placeholder-box2" style="transform: translate(calc(-50% - 600px), 0px); text-align: left;">
+         <div id="P4_s32_text1" class="overlay-element demi-gauche hidden">
+            <div class="placeholder-box2" style="transform: translate(0, -30px);">
                 <p>On sépare le relationnel.</p>
             </div>
         </div>
 
-        <div id="P4_s32_text2" class="overlay-element hidden">
-            <div class="placeholder-box2"  style="transform: translate(calc(-50% + 150px), 0px); text-align: left;">
-                <p>On fait de la science,</p>
+        <div id="P4_s32_text2" class="overlay-element demi-droite hidden">
+            <div class="placeholder-box2"  style="transform: translate(0, -30px); ">
+                <p>Nous faisons de la science,</p>
             </div>
         </div>
 
-        <div id="P4_s32_text3" class="overlay-element hidden">
-            <div class="placeholder-box2"  style="transform: translate(calc(-50% + 150px), 30px); text-align: left; ">
-                <p>on pêche ensemble.</p>
+        <div id="P4_s32_text3" class="overlay-element demi-droite hidden">
+            <div class="placeholder-box2"  style="transform: translate(0, 0px); ">
+                <p>nous pêchons ensemble.</p>
             </div>
         </div>
 
         <!-- Partie 4 - séquence 6 - gris et attente -->
-         <div id="P4_s33_text1" class="overlay-element hidden">
-            <div class="placeholder-box2" style="transform: translate(calc(-50% - 600px), 0px); text-align: left;">
+         <div id="P4_s33_text1" class="overlay-element demi-gauche hidden">
+            <div class="placeholder-box2" style="transform: translate(0, -30px);">
                 <p>On produit, écrit, progresse.</p>
             </div>
         </div>
 
-        <div id="P4_s33_text2" class="overlay-element hidden">
-            <div class="placeholder-box2"  style="transform: translate(calc(-50% + 150px), 0px); text-align: left;">
-                <p>C’est long, on attend.</p>
+        <div id="P4_s33_text2" class="overlay-element demi-droite hidden">
+            <div class="placeholder-box2"  style="transform: translate(0, -30px);">
+                <p>C’est long, j'attends.</p>
             </div>
         </div>
 
-        <div id="P4_s33_text3" class="overlay-element hidden">
-            <div class="placeholder-box2"  style="transform: translate(calc(-50% + 150px), 30px); text-align: left; ">
+        <div id="P4_s33_text3" class="overlay-element demi-droite hidden">
+            <div class="placeholder-box2"  style="transform: translate(0, 0px);">
                 <p>Quelque chose va se passer.</p>
             </div>
         </div>
 
-        <div id="P4_s33_text4" class="overlay-element hidden">
-            <div class="placeholder-box2"  style="transform: translate(calc(-50% + 150px), 60px); text-align: left;">
-                <p>On boit du thé.</p>
+        <div id="P4_s33_text4" class="overlay-element demi-droite hidden">
+            <div class="placeholder-box2"  style="transform: translate(0, 30px);">
+                <p>Je leur prépare le thé.</p>
             </div>
         </div>
 
@@ -302,7 +341,7 @@
         <!-- Partie 5 - outro -->
         <div id="P5_s36_text1" class="overlay-element hidden">
             <div class="placeholder-box" style="transform: translate(-50%, -30px);">
-                <p>Hommage au ptit coeur,</p>
+                <p>Hommage au p'tit coeur,</p>
             </div>
         </div>
 
