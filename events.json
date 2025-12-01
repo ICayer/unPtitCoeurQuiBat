@@ -3,17 +3,17 @@
     {
       "timeStart": 0,
       "timeEnd": 5,
-      "speed": 0.1
+      "speed": 0.05
     },
     {
       "timeStart": 5,
       "timeEnd": 10,
-      "speed": 0.1
+      "speed": 0.05
     },
     {
       "timeStart": 10,
       "timeEnd": 233,
-      "speed": 0.2
+      "speed": 0.1
     }
   ],
   "events": [
@@ -273,7 +273,7 @@
       "type": "element",
       "elementId": "P5_s36_text1",
       "timeIn": 227.9,
-      "timeOut": 233
+      "timeOut": 236.80
     },
     {
       "type": "element",
@@ -304,23 +304,14 @@
     },
     {
       "type": "sound",
-      "file": "P3_Script4_s10_rapide2.mp3",
+      "file": "P3_Script4_s10_rapide.mp3",
       "timeIn": 34.36,
       "timeOut": 37.33,
       "loop": true
-    }
-    ,
+    },
     {
       "type": "sound",
-      "file": "P3_Script4_s10_lent.mp3",
-      "timeIn": 37.33,
-      "timeOut": 42.66,
-      "loop": true
-    }
-    ,
-    {
-      "type": "sound",
-      "file": "P3_Script4_s13_rapide2.mp3",
+      "file": "P3_Script4_s13_rapide.mp3",
       "timeIn": 42.66,
       "timeOut": 47.66,
       "loop": true
@@ -328,15 +319,7 @@
     ,
     {
       "type": "sound",
-      "file": "P3_Script4_s13_lent.mp3",
-      "timeIn": 42.66,
-      "timeOut": 51.29,
-      "loop": true
-    }
-    ,
-    {
-      "type": "sound",
-      "file": "P3_Script4_s17_rapide2.mp3",
+      "file": "P3_Script4_s17_rapide.mp3",
       "timeIn": 51.29,
       "timeOut": 57.40,
       "loop": true
@@ -344,15 +327,7 @@
     ,
     {
       "type": "sound",
-      "file": "P3_Script4_s17_lent.mp3",
-      "timeIn": 57.40,
-      "timeOut": 62.96,
-      "loop": true
-    }
-    ,
-    {
-      "type": "sound",
-      "file": "P3_Script4_s20_rapide2.mp3",
+      "file": "P3_Script4_s20_rapide.mp3",
       "timeIn": 60.94,
       "timeOut": 65.83,
       "loop": true
@@ -360,15 +335,7 @@
     ,
     {
       "type": "sound",
-      "file": "P3_Script4_s20_lent.mp3",
-      "timeIn": 65.83,
-      "timeOut": 69.88,
-      "loop": true
-    }
-    ,
-    {
-      "type": "sound",
-      "file": "P3_Script4_s23_rapide2.mp3",
+      "file": "P3_Script4_s23_rapide.mp3",
       "timeIn": 69.88,
       "timeOut": 74.91,
       "loop": true
@@ -376,25 +343,9 @@
     ,
     {
       "type": "sound",
-      "file": "P3_Script4_s23_lent.mp3",
-      "timeIn": 74.91,
-      "timeOut": 79,
-      "loop": true
-    }
-    ,
-    {
-      "type": "sound",
-      "file": "P3_Script4_s26_rapide2.mp3",
+      "file": "P3_Script4_s26_rapide.mp3",
       "timeIn": 79,
       "timeOut": 83.75,
-      "loop": true
-    }
-    ,
-    {
-      "type": "sound",
-      "file": "P3_Script4_s26_lent.mp3",
-      "timeIn": 83.75,
-      "timeOut": 83.85,
       "loop": true
     }
     ,
