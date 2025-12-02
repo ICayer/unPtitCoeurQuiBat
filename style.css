@@ -85,16 +85,16 @@ body {
     padding: 30px 60px;
     font-size: 32px;
     font-weight: bold;
-    background: #fff;
-    color: #000;
+    background: #000;
+    color: #fff;
     border: none;
-    border-radius: 10px;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
 .play-button:hover {
-    background: #f9f6df;
+    background: #000;
+    color: #e7e5e5;
     transform: scale(1.05);
 }
 

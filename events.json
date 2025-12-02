@@ -19,9 +19,21 @@
   "events": [
     {
       "type": "element",
-      "elementId": "P3_s10_phrase",
-      "timeIn": 34.5,
-      "timeOut": 37.5
+      "elementId": "P2_s7_text1",
+      "timeIn": 18.04,
+      "timeOut": 21.64
+    },
+    {
+      "type": "element",
+      "elementId": "P2_s7_text2",
+      "timeIn": 19,
+      "timeOut": 21.64
+    },
+    {
+      "type": "element",
+      "elementId": "P2_s7_text3",
+      "timeIn": 20,
+      "timeOut": 21.64
     },
     {
       "type": "element",
@@ -128,6 +140,12 @@
     {
       "type": "element",
       "elementId": "P3_s26_text3",
+      "timeIn": 80.5,
+      "timeOut": 83
+    },
+     {
+      "type": "element",
+      "elementId": "P3_s26_text4",
       "timeIn": 82,
       "timeOut": 83
     },
@@ -183,6 +201,18 @@
       "type": "element",
       "elementId": "P4_s30_text2",
       "timeIn": 134,
+      "timeOut": 137.8
+    },
+    {
+      "type": "element",
+      "elementId": "P4_s30_text3",
+      "timeIn": 135,
+      "timeOut": 137.8
+    },
+    {
+      "type": "element",
+      "elementId": "P4_s30_text4",
+      "timeIn": 136,
       "timeOut": 137.8
     },
     {
