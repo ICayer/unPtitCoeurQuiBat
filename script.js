@@ -262,10 +262,7 @@ function initAutoScroll() {
         if (lastTimestamp !== null) {
             const elapsed = (timestamp - lastTimestamp) / 1000; // secondes écoulées
             const speed = getCurrentSpeed();
-            // En autoscroll, on avance en temps réel (1s = 1s de vidéo)
-            // La vitesse du roadmap est un ratio relatif : on normalise par rapport à la valeur par défaut (1.0)
-            // Si toutes les valeurs du roadmap sont petites, on utilise une vitesse normalisée
-            const delta = elapsed;
+            const delta = elapsed * speed;
             state.currentTime = Math.min(state.videoDuration, state.currentTime + delta);
             state.video.currentTime = state.currentTime;
             updateEvents();
