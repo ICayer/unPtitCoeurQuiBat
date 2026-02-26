@@ -12,7 +12,8 @@ const state = {
     currentTime: 0,
     videoDuration: 0,
     isReady: false,
-    autoscroll: new URLSearchParams(window.location.search).get('autoscroll') === '1'
+    autoscroll: new URLSearchParams(window.location.search).get('autoscroll') === '1',
+    autoscrollSpeed: parseFloat(new URLSearchParams(window.location.search).get('speed')) || 1.0
 };
 
 // DOM Elements
@@ -262,7 +263,7 @@ function initAutoScroll() {
         if (lastTimestamp !== null) {
             const elapsed = (timestamp - lastTimestamp) / 1000; // secondes écoulées
             const speed = getCurrentSpeed();
-            const delta = elapsed * speed;
+            const delta = elapsed * state.autoscrollSpeed;
             state.currentTime = Math.min(state.videoDuration, state.currentTime + delta);
             state.video.currentTime = state.currentTime;
             updateEvents();
