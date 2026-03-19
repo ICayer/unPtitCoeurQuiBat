@@ -11,7 +11,9 @@ const state = {
     virtualScroll: 0,
     currentTime: 0,
     videoDuration: 0,
-    isReady: false
+    isReady: false,
+    autoscroll: new URLSearchParams(window.location.search).get('autoscroll') === '1',
+    autoscrollSpeed: parseFloat(new URLSearchParams(window.location.search).get('speed')) || 1.0
 };
 
 // DOM Elements
@@ -207,10 +209,13 @@ function startExperience() {
     dom.mainContent.classList.remove('hidden');
     state.isReady = true;
 
-    // Initialize scroll system
-    initVirtualScroll();
+    if (state.autoscroll) {
+        initAutoScroll();
+    } else {
+        initVirtualScroll();
+    }
 
-    console.log('Experience started!');
+    console.log('Experience started! Autoscroll:', state.autoscroll);
 }
 
 // ============================================
@@ -243,6 +248,33 @@ function initVirtualScroll() {
         updateDebugInfo(speed);
 
     }, { passive: false });
+}
+
+// ============================================
+// AUTO SCROLL
+// ============================================
+
+function initAutoScroll() {
+    let lastTimestamp = null;
+
+    function tick(timestamp) {
+        if (state.currentTime >= state.videoDuration) return;
+
+        if (lastTimestamp !== null) {
+            const elapsed = (timestamp - lastTimestamp) / 1000; // secondes écoulées
+            const speed = getCurrentSpeed();
+            const delta = elapsed * state.autoscrollSpeed;
+            state.currentTime = Math.min(state.videoDuration, state.currentTime + delta);
+            state.video.currentTime = state.currentTime;
+            updateEvents();
+            updateDebugInfo(speed);
+        }
+
+        lastTimestamp = timestamp;
+        requestAnimationFrame(tick);
+    }
+
+    requestAnimationFrame(tick);
 }
 
 // ============================================
