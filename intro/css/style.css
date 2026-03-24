@@ -189,8 +189,7 @@ a:hover {
 .entry-buttons {
   display: flex;
   justify-content: center;
-  gap: 2rem;
-  padding: 60px 0;
+ 
 }
 
 .entry-btn {
