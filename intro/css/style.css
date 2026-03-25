@@ -176,7 +176,7 @@ a:hover {
 .context-section {
   max-width: 800px;
   margin: 0 auto;
-  padding: 40px 0;
+  padding: 40px 0 10px 0;
   text-align: justify;
 }
 
@@ -185,11 +185,16 @@ a:hover {
   line-height: 1.8;
 }
 
+/* Supprime la marge sous le dernier paragraphe de cette section */
+.context-section p:last-child {
+  margin-bottom: 0;
+}
+
 /* Boutons d'entrée */
 .entry-buttons {
   display: flex;
   justify-content: center;
- 
+  padding-top: 0; /* S'assure qu'il n'y a pas de padding en haut ici */
 }
 
 .entry-btn {
