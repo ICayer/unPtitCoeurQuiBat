@@ -777,6 +777,13 @@ a:hover {
     font-size: 1rem;
   }
 
+ .video-section {
+    max-width: 900px;
+    margin: 40px auto; 
+    padding: 0 20px;
+  }
+
+
   .context-section p {
     font-size: 1.2rem;
   }
